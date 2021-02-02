@@ -1,5 +1,4 @@
-![FIREMAN](https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/logo-fireman.png "FIREMAN")
-# FIREMAN-project Frontend repository
+# ![FIREMAN](https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/logo-fireman.png) FIREMAN-project Frontend repository
 
 Machine learning prediction Frontend related to [FIREMAN project](https://fireman-project.eu/) and main [FIREMAN-project repository](https://github.com/5uperpalo/FIREMAN-project/).
 Reporsitory is a work-in-progress project that is part of FIREMAN project activities. 
@@ -38,7 +37,7 @@ docker-compose -f up -d
 
 Grafana has a preloaded dashboard and configuration connecting to InfluxDB. Grafana GUI is provided at http://localhost:3000 , user/pass : admin/admin
 
-![Grafana](https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/grafana_screenshot.PNG "Grafana")
+![Grafana](https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/grafana_screenshot.PNG =200x)
 
 ## Notes included in the repository:
 * [todo list](https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/TODO.MD)
