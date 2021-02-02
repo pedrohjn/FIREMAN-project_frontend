@@ -1,0 +1,6 @@
+datasources:
+  - name: InfluxDB
+    type: influxdb
+    access: proxy
+    database: spam
+    url: http://influxdb:8086

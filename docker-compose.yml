@@ -6,16 +6,30 @@ services:
     build: ./generator
     environment:
       KAFKA_BROKER_URL: broker:9092
-      TRANSACTIONS_TOPIC: queueing.transactions
-      TRANSACTIONS_PER_SECOND: 1000
+      DATA_TOPIC: streaming.data
+      LINES_PER_SECOND: 0.5
+    volumes: 
+      - ./logs:/logs:rw
 
-  detector:
-    build: ./detector
+  classifier:
+    build: ./classifier
     environment:
       KAFKA_BROKER_URL: broker:9092
-      TRANSACTIONS_TOPIC: queueing.transactions
-      LEGIT_TOPIC: streaming.transactions.legit
-      FRAUD_TOPIC: streaming.transactions.fraud
+      DATA_TOPIC: streaming.data
+    volumes: 
+      - ./logs:/logs:rw
+
+  influxdb:
+    container_name: influxdb
+    image: influxdb:latest
+    ports:
+      - 8086:8086
+          
+  grafana:
+    container_name: grafana
+    build: ./grafana
+    ports: 
+      - 3000:3000
 
 networks:
   default:

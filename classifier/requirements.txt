@@ -1,0 +1,5 @@
+kafka-python
+influxdb
+joblib
+sklearn
+numpy
