@@ -1,10 +1,18 @@
+[FIREMAN](https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/logo-fireman.png "FIREMAN")
 # FIREMAN-project Frontend repository
 
 Machine learning prediction Frontend related to [FIREMAN project](https://fireman-project.eu/) and main [FIREMAN-project repository](https://github.com/5uperpalo/FIREMAN-project/).
 Reporsitory is a work-in-progress project that is part of FIREMAN project activities. 
+Skeleton of the repository is based on [Kafka Fraud Detector](https://github.com/florimondmanca/kafka-fraud-detector).
 
 ## Implementation design and cosiderations
-TBD I am fucking tired, it has bee a long day 
+[design](https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/main.png "design")
+### Considerations
+* emulate real-world IoT scenario
+* pluggable approach, ie. easily add/swap imputer/classifer for other Python or Java implementation
+* scalability 
+* maintainability
+* robustness 
 
 ## Starting/Running
 
@@ -23,6 +31,8 @@ docker-compose -f docker-compose.kafka.yml up -d
 docker-compose -f up -d
 ```
 
+### Note
+* [jupyter notebook](https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/examples/example_models_n_data_preparation.ipynb) describes how we create simple imputer , classifier and dataset
 
 ## Monitoring
 
