@@ -1,11 +1,13 @@
-# <img src="https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/logo-fireman.png" height="64" /> FIREMAN-project Frontend repository
+# <img src="https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/logo-fireman.png" height="64" />FIREMAN-project Frontend repository
 
 Machine learning prediction Frontend related to [FIREMAN project](https://fireman-project.eu/) and main [FIREMAN-project repository](https://github.com/5uperpalo/FIREMAN-project/).
 Reporsitory is a work-in-progress project that is part of FIREMAN project activities. 
 Skeleton of the repository is based on [Kafka Fraud Detector](https://github.com/florimondmanca/kafka-fraud-detector).
 
 ## Implementation design and cosiderations
-![design](https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/main.png "design")
+
+<img src="https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/main.png" height="320" />
+
 ### Considerations
 * emulate real-world IoT scenario
 * pluggable approach, ie. easily add/swap imputer/classifer for other Python or Java implementation
