@@ -58,7 +58,7 @@ Grafana has a preloaded dashboard and configuration connecting to InfluxDB. Graf
 * **[Incorrect time]** the Grafana uses local time in the browser, ie. your system time. If you are running the docker in WSL under Windows [the WSL timeclock is not "ticking" when your comupter is at sleep](https://github.com/microsoft/WSL/issues/4245#issuecomment-508023086) and ```date``` in WSL will show different time than your OS time
   * **[SOLUTION]** update your WSL time ```ntpdate pool.ntp.org```
 * **[Incorrect timezone]** command ```date``` in docker is showing incorrect timezone -> The Grafana has data shifted compared to your OS time
-  * **[SOLUTION](https://serverfault.com/questions/683605/docker-container-time-timezone-will-not-reflect-changes)** set correct timezone env **TZ** in docker-compose file of each machine, tzdata is already installed. 
+  * **[[SOLUTION]](https://serverfault.com/questions/683605/docker-container-time-timezone-will-not-reflect-changes)** set correct timezone env **TZ** in docker-compose file of each machine, tzdata is already installed. 
 
 ## Notes included in the repository:
 * [TODO](https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/TODO.MD)
