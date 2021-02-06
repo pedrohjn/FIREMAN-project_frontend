@@ -3,8 +3,10 @@ version: '3'
 services:
 
   generator:
+    container_name: generator
     build: ./generator
     environment:
+      TZ: CET
       KAFKA_BROKER_URL: broker:9092
       DATA_TOPIC: streaming.data
       LINES_PER_SECOND: 0.5
@@ -12,8 +14,10 @@ services:
       - ./logs:/logs:rw
 
   classifier:
+    container_name: classifier
     build: ./classifier
     environment:
+      TZ: CET
       KAFKA_BROKER_URL: broker:9092
       DATA_TOPIC: streaming.data
     volumes: 
@@ -21,13 +25,17 @@ services:
 
   influxdb:
     container_name: influxdb
-    image: influxdb:latest
+    build: ./influxdb
+    environment:
+      TZ: CET
     ports:
       - 8086:8086
           
   grafana:
     container_name: grafana
     build: ./grafana
+    environment:
+      TZ: CET
     ports: 
       - 3000:3000
 
