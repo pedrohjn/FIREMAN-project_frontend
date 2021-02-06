@@ -63,3 +63,30 @@ Grafana has a preloaded dashboard and configuration connecting to InfluxDB. Graf
 ## Notes included in the repository:
 * [TODO](https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/TODO.MD)
 * [NOTES](https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/NOTES.MD), usefull notes
+
+## Usefull Docker commands
+```
+# build dockerfile - must be run from folder with dockerfile definition
+docker build -t [CONTAINER_TAG] .
+
+# show list of images
+docker images
+
+# show list of containers
+docker ps
+
+# remove container (add -f parameter for forced remove)
+docker rm [CONTAINER_TAG] -f
+
+# remove image
+docker image remove [IMAGE_NAME]
+
+# start/stop container
+docker start/stop [CONTAINER_TAG]
+
+# run container with port forwarding
+docker run -p container_port:local_port [IMAGE_NAME]
+
+# run linux bash in container
+docker exec -it [CONTAINER_TAG] /bin/bash
+```
