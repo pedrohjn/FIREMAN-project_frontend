@@ -10,8 +10,8 @@ Skeleton of the repository is based on [Kafka Fraud Detector](https://github.com
 <img src="https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/ml_pipeline.png" height="320"/>
 <img src="https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/batch_model.png" height="160"/>
 <img src="https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/stream_based_model.png" height="160"/>
-<img src="https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/generator_model.png" height="160"/>
-<img src="https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/imputer_model.png" height="160"/>
+<img src="https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/generator_model.png" height="100"/>
+<img src="https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/imputer_model.png" height="100"/>
 
 ### Considerations
 * emulate real-world IoT scenario
