@@ -1,6 +1,10 @@
 import logging
 import os
 
+RANDOM_FOREST_CLF = 'scikit-learn_clf_model/rf.joblib'
+SIMPLE_MEAN_IMP = 'scikit-learn_imp_model/simple_mean.joblib'
+KAFKA_BROKER_URL = os.environ.get('KAFKA_BROKER_URL')
+
 EXPECTED_MESSAGE = {'Cont_1': 'nan', 'Cont_2': 'nan', 'Cont_3': 'nan', 'Cont_4': 'nan',
 'Cont_5': 'nan', 'Cont_6': 'nan', 'Cont_7': 'nan', 'Cont_8': 'nan', 'Cont_9': 'nan',
 'Cont_10': 'nan', 'Cont_11': 'nan', 'Cont_12': 'nan', 'Cont_13': 'nan', 'Cont_14': 'nan',
@@ -13,11 +17,6 @@ EXPECTED_MESSAGE = {'Cont_1': 'nan', 'Cont_2': 'nan', 'Cont_3': 'nan', 'Cont_4':
 'Cont_45': 'nan', 'Cont_46': 'nan', 'Cont_47': 'nan', 'Cont_48': 'nan', 'Cont_49': 'nan',
 'Cont_50': 'nan', 'Cont_51': 'nan', 'Cont_52': 'nan', 'Cont_53': 'nan', 'Cont_54': 'nan',
 'Cont_55': 'nan', 'Cont_56': 'nan', 'Cont_57': 'nan'}
-
-RANDOM_FOREST_CLF = 'scikit-learn_clf_model/rf.joblib'
-SIMPLE_MEAN_IMP = 'scikit-learn_imp_model/simple_mean.joblib'
-KAFKA_BROKER_URL = os.environ.get('KAFKA_BROKER_URL')
-DATA_TOPIC = os.environ.get('DATA_TOPIC')
 
 logging_config = {
     "version": 1,

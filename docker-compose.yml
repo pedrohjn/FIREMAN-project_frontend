@@ -7,9 +7,16 @@ services:
     build: ./generator
     environment:
       TZ: CET
-      KAFKA_BROKER_URL: broker:9092
-      DATA_TOPIC: streaming.data
       LINES_PER_SECOND: 0.5
+    volumes: 
+      - ./logs:/logs:rw
+
+  collector:
+    container_name: classifier
+    build: ./collector
+    environment:
+      TZ: CET
+      KAFKA_BROKER_URL: broker:9092
     volumes: 
       - ./logs:/logs:rw
 
@@ -19,7 +26,6 @@ services:
     environment:
       TZ: CET
       KAFKA_BROKER_URL: broker:9092
-      DATA_TOPIC: streaming.data
     volumes: 
       - ./logs:/logs:rw
 
@@ -30,15 +36,25 @@ services:
       TZ: CET
     ports:
       - 8086:8086
-          
-  grafana:
-    container_name: grafana
-    build: ./grafana
-    environment:
-      TZ: CET
-    ports: 
-      - 3000:3000
 
+  nginx:
+    restart: always
+    image: "nginx:latest"
+    ports:
+      - "80:80"
+      - "443":"443"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    networks:
+      - web_network
+    depends_on: 
+      - appseed-app
+
+networks:
+  db_network:
+    driver: bridge
+  web_network:
+    driver: bridge          
 networks:
   default:
     external:

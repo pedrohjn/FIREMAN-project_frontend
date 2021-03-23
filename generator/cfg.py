@@ -2,10 +2,14 @@ import logging
 import os
 
 DATA_PATH = 'data/spam_test.csv'
-KAFKA_BROKER_URL = os.environ.get('KAFKA_BROKER_URL')
-DATA_TOPIC = os.environ.get('DATA_TOPIC')
 LINES_PER_SECOND = float(os.environ.get('LINES_PER_SECOND'))
 SLEEP_TIME = 1 / LINES_PER_SECOND
+
+collector = {
+    'url': 'localhost:5005',
+    'username': 'SPAM',
+    'password': 'password',
+    }
 
 logging_config = {
     "version": 1,
