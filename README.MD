@@ -30,6 +30,8 @@ Generator streams("produces") data with missing values to Collector by POST mess
 * it is possible to swap Kafka client in collector with [Faust(Python stream processing)](https://faust.readthedocs.io/en/latest/) or add KSQL to join/merge streams(Kafka topics) from sensors, eg. [solution with KSQL](https://medium.com/@ketulsheth2/streaming-data-pipeline-using-kafka-ksql-influxdb-and-grafana-8a934569fcb9)
 * **[dev]** possibility to test new models using saved {Python, Java, R} models with corresponding [MLflow API](https://www.mlflow.org/docs/latest/index.html) on a local machine, for some ideas read following [article](https://towardsdatascience.com/how-to-build-a-real-time-fraud-detection-pipeline-using-faust-and-mlflow-24e787dd51fa)
 * possibility to train/test/track new models in [Apache Airflow](https://airflow.apache.org/) or [MLflow](https://mlflow.org/) to periodically update and track the models, see folllowing [article](https://medium.com/vantageai/keeping-your-ml-model-in-shape-with-kafka-airflow-and-mlflow-143d20024ba6)
+
+
 ## Starting/Running
 
 Implementation is fully containerised. You will need Docker and Docker Compose to run it.
@@ -52,8 +54,7 @@ docker-compose -f up -d
   * notebook uses function from [FIREMAN imputation repo](https://github.com/5uperpalo/FIREMAN-project_imputation)
 
 ## Monitoring
-
-Grafana has a preloaded dashboard and configuration connecting to InfluxDB. Grafana GUI is provided at http://localhost:3000 , user/pass : admin/admin
+Using adjusted [flask dashboard](https://github.com/app-generator/flask-dashboard-coreui).
 
 <img src="https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/fireman_dashboard.png" height="320"/>
 
