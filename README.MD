@@ -45,7 +45,7 @@ docker-compose -f docker-compose.kafka.yml up -d
 ```
 * start the (i) data generator, (ii) imputer/classifier, (iii) InfluxDB and (iv) Grafana
 ```bash
-docker-compose -f up -d
+docker-compose -f docker-compose.yml up
 ```
 
 ### Note
