@@ -36,3 +36,60 @@
 [2021-05-03 03:42:03,315] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
 [2021-05-03 03:42:03,316] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
 [2021-05-03 03:42:03,316] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.21.0.2', 9092)]>: Closing connection. 
+[2021-05-03 09:29:23,139] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
+[2021-05-03 09:29:23,140] [kafka.conn] [INFO] Probing node bootstrap-0 broker version
+[2021-05-03 09:29:23,141] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
+[2021-05-03 09:29:23,243] [kafka.conn] [INFO] Broker version identified as 2.5.0
+[2021-05-03 09:29:23,244] [kafka.conn] [INFO] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2021-05-03 09:29:23,245] [kafka.coordinator.consumer] [WARNING] group_id is None: disabling auto-commit.
+[2021-05-03 09:29:23,246] [kafka.consumer.subscription_state] [INFO] Updating subscribed topics to: ('spam_data',)
+[2021-05-03 09:29:23,248] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
+[2021-05-03 09:29:23,249] [kafka.conn] [INFO] Probing node bootstrap-0 broker version
+[2021-05-03 09:29:23,250] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
+[2021-05-03 09:29:23,352] [kafka.conn] [INFO] Broker version identified as 2.5.0
+[2021-05-03 09:29:23,353] [kafka.conn] [INFO] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2021-05-03 09:29:23,356] [kafka.consumer.subscription_state] [INFO] Updated partition assignment: [TopicPartition(topic='spam_data', partition=0)]
+[2021-05-03 09:29:23,357] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
+[2021-05-03 09:29:23,358] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
+[2021-05-03 09:29:23,358] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.21.0.2', 9092)]>: Closing connection. 
+[2021-05-03 09:29:23,931] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
+[2021-05-03 09:29:23,932] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
+[2021-05-03 09:29:23,933] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.21.0.2', 9092)]>: Closing connection. 
+[2021-05-03 09:59:41,011] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
+[2021-05-03 09:59:41,012] [kafka.conn] [INFO] Probing node bootstrap-0 broker version
+[2021-05-03 09:59:41,013] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
+[2021-05-03 09:59:41,118] [kafka.conn] [INFO] Broker version identified as 2.5.0
+[2021-05-03 09:59:41,119] [kafka.conn] [INFO] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2021-05-03 09:59:41,120] [kafka.coordinator.consumer] [WARNING] group_id is None: disabling auto-commit.
+[2021-05-03 09:59:41,121] [kafka.consumer.subscription_state] [INFO] Updating subscribed topics to: ('spam_data',)
+[2021-05-03 09:59:41,123] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
+[2021-05-03 09:59:41,124] [kafka.conn] [INFO] Probing node bootstrap-0 broker version
+[2021-05-03 09:59:41,127] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
+[2021-05-03 09:59:41,230] [kafka.conn] [INFO] Broker version identified as 2.5.0
+[2021-05-03 09:59:41,231] [kafka.conn] [INFO] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2021-05-03 09:59:41,234] [kafka.consumer.subscription_state] [INFO] Updated partition assignment: [TopicPartition(topic='spam_data', partition=0)]
+[2021-05-03 09:59:41,236] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
+[2021-05-03 09:59:41,236] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
+[2021-05-03 09:59:41,238] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.21.0.2', 9092)]>: Closing connection. 
+[2021-05-03 09:59:42,022] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
+[2021-05-03 09:59:42,022] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
+[2021-05-03 09:59:42,023] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.21.0.2', 9092)]>: Closing connection. 
+[2021-05-03 10:04:15,682] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
+[2021-05-03 10:04:15,682] [kafka.conn] [INFO] Probing node bootstrap-0 broker version
+[2021-05-03 10:04:15,683] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
+[2021-05-03 10:04:15,788] [kafka.conn] [INFO] Broker version identified as 2.5.0
+[2021-05-03 10:04:15,789] [kafka.conn] [INFO] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2021-05-03 10:04:15,790] [kafka.coordinator.consumer] [WARNING] group_id is None: disabling auto-commit.
+[2021-05-03 10:04:15,791] [kafka.consumer.subscription_state] [INFO] Updating subscribed topics to: ('spam_data',)
+[2021-05-03 10:04:15,795] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
+[2021-05-03 10:04:15,797] [kafka.conn] [INFO] Probing node bootstrap-0 broker version
+[2021-05-03 10:04:15,798] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
+[2021-05-03 10:04:15,901] [kafka.conn] [INFO] Broker version identified as 2.5.0
+[2021-05-03 10:04:15,902] [kafka.conn] [INFO] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2021-05-03 10:04:15,906] [kafka.consumer.subscription_state] [INFO] Updated partition assignment: [TopicPartition(topic='spam_data', partition=0)]
+[2021-05-03 10:04:15,909] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
+[2021-05-03 10:04:15,910] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
+[2021-05-03 10:04:15,910] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.21.0.2', 9092)]>: Closing connection. 
+[2021-05-03 10:04:16,560] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
+[2021-05-03 10:04:16,561] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
+[2021-05-03 10:04:16,561] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.21.0.2', 9092)]>: Closing connection. 
