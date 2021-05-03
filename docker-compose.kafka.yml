@@ -8,6 +8,8 @@ services:
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
+    networks:
+      - storage
 
   broker:
     container_name: broker
@@ -17,10 +19,18 @@ services:
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:9092, CONNECTIONS_FROM_HOST://localhost:19092
+      KAFKA_CFG_LISTENERS: PLAINTEXT://:9092,CONNECTIONS_FROM_HOST://:19092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONNECTIONS_FROM_HOST:PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    ports:
+      - 9092:9092
+      - 19092:19092
+    networks:
+      - storage
+    depends_on:
+      - zookeeper
 
 networks:
-  default:
-    external:
-      name: kafka-network
+  storage:
+    driver: bridge

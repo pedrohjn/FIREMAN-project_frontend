@@ -11,11 +11,11 @@ ADD ./requirements.txt ./
 RUN pip install -r requirements.txt
 ADD ./ ./
 
+ENV HOST 0.0.0.0
+ENV PORT 5005
+
 # listening ports, values are informational
 EXPOSE 5005
 
-# install requirements
-RUN pip install -r /app/requirements.txt
-
 # run gunicorn
-CMD ["gunicorn", "--config", "gunicorn-cfg.py", "run:app"]
+CMD ["gunicorn", "--config", "gunicorn-cfg.py", "app:app"]

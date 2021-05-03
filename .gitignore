@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+*.ipynb_checkpoints*
+*__pycache__*
+*.py[cod]
+*~
+ipython/.ipynb_checkpoints
+.python-version
+.pylintrc
+
+# Distribution / packaging
+*.log*
+.vscode
+.Python
+env/
+bin/
+build/
+#docs/_build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+#_build/
+*.egg-info/
+.installed.cfg
+*.egg
+*.pyc

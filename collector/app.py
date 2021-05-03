@@ -8,19 +8,20 @@ import json
 from jsonschema import validate
 from influxdb import InfluxDBClient
 from kafka import KafkaProducer
+from datetime import datetime
 
 logging.config.dictConfig(cfg.logging_config)
 logger = logging.getLogger(__name__)
 
 # load input schema
-input_schema = json.load(open(cfg.api['input_schema']))
+#input_schema = json.load(open(cfg.api['input_schema']))
 
 # initialize app and api
 app = Flask(__name__)
 api = Api(app)
 # authentication
 auth = HTTPBasicAuth()
-users = {cfg.api['username']: generate_password_hash(cfg.api['password'])}
+#users = {cfg.api['username']: generate_password_hash(cfg.api['password'])}
 
 # producers for kafka stream and Influxdb
 client = InfluxDBClient(host='influxdb', port=8086, database='fireman')
@@ -34,7 +35,8 @@ producer = KafkaProducer(
 def check_postdata(request):
     # check posted data
     if request.is_json is True:
-        posted_data = request.get_json()
+        posted_data = request.get_json(force=True)
+        #posted_data = request.json
     else:
         posted_data =  json.loads(request.data.decode("utf-8"))
     
@@ -43,20 +45,20 @@ def check_postdata(request):
 
     return posted_data
 
-@auth.verify_password
-def verify_password(username, password):
-    """
-    Simple helper function for basic http authetication
+# @auth.verify_password
+# def verify_password(username, password):
+#     """
+#     Simple helper function for basic http authetication
 
-    Parameters
-    ----------
+#     Parameters
+#     ----------
 
-    Returns
-    ----------
+#     Returns
+#     ----------
 
-    """
-    if username in users and check_password_hash(users.get(username), password):
-        return username
+#     """
+#     if username in users and check_password_hash(users.get(username), password):
+#         return username
 
 
 class SPAM(Resource):
@@ -75,12 +77,13 @@ class SPAM(Resource):
 
     """
     # posting data for computation
-    @auth.login_required
+    #@auth.login_required
     def post(self):
-        
         try:
-            #validate input, check session_id, check input request content-type (json/text) 
+            #validate input, check session_id, check input request content-type (json/text)   
             posted_data = check_postdata(request)
+            posted_data['timestamp'] = datetime.now().strftime('%H:%m:%S')
+            logger.info(posted_data)
             producer.send('spam_data', value=posted_data)
             result = [
                 {"measurement": "data", 

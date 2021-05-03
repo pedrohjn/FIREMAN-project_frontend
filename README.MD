@@ -24,7 +24,7 @@ Skeleton of the repository is based on [Kafka Fraud Detector](https://github.com
 Generator streams("produces") data with missing values to Collector by POST messages. Collector streams measurements to Kafka topics (kafka-network) for imidiate processing and to Timeseries database (TMDB - InfluxDB) for further use in new model training experiments in Airflow/MLflow/etc.. Example kafka-network includes only 1 broker(no need for more for development purpose) and Apache Zookeeper (keeps track of status of the Kafka cluster node[s], topics, partitions etc.). Imputer/classifier "consumes" Kafka topic, imputes missing values with [SimpleImputer](https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html) and predicts label with [RandomForest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html?highlight=random%20forest#sklearn.ensemble.RandomForestClassifier) classifier. The predicted labels are send back to Kafka. Analytics dashboard consumes Kafka topics and visualizes them. Example train/test data included in the repo are from [UCI](https://archive.ics.uci.edu/ml/datasets/Spambase) - small size of the dataset.
 * data streams - Kafka or Faust, well-known, well-supported, data is replicated on brokers, weel integrated with Python, Java, Scala, Spark etc.
 * data processing - Python, Java + easy way to incorporate ML models lifecycle using MLflow, AirFlow, etc.
-* data visualization - analytics dashboard created by Flask, Node JS, WebSocket and Chart JS
+* data visualization - analytics dashboard created in Flask, Node JS, Socket.IO and FusionCharts
 * data storage - time-series database, InfluxDB
 * it is possible to swap Kafka client in collector with [Faust(Python stream processing)](https://faust.readthedocs.io/en/latest/) or add KSQL to join/merge streams(Kafka topics) from sensors, eg. [solution with KSQL](https://medium.com/@ketulsheth2/streaming-data-pipeline-using-kafka-ksql-influxdb-and-grafana-8a934569fcb9)
 * **[dev]** possibility to test new models using saved {Python, Java, R} models with corresponding [MLflow API](https://www.mlflow.org/docs/latest/index.html) on a local machine, for some ideas read following [article](https://towardsdatascience.com/how-to-build-a-real-time-fraud-detection-pipeline-using-faust-and-mlflow-24e787dd51fa)
@@ -37,15 +37,16 @@ Implementation is fully containerised. You will need Docker and Docker Compose t
 
 * create a Docker network called kafka-network to enable communication between the Kafka  
 ```bash
-docker network create kafka-network
+docker network create storage
+docker network create api
 ```
 * create single-node Kafka cluster and run in the background
 ```bash
 docker-compose -f docker-compose.kafka.yml up -d
 ```
-* start the (i) data generator, (ii) imputer/classifier, (iii) InfluxDB and (iv) Grafana
+* start the (i) data generator, (ii) imputer/classifier, (iii) InfluxDB and (iv) Analytics Dashboard
 ```bash
-docker-compose -f docker-compose.yml up
+docker-compose -f docker-compose.yml up -d
 ```
 
 ### Note

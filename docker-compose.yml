@@ -2,23 +2,33 @@ version: '3'
 
 services:
 
-  generator:
-    container_name: generator
-    build: ./generator
-    environment:
-      TZ: CET
-      LINES_PER_SECOND: 0.5
-    volumes: 
-      - ./logs:/logs:rw
-
   collector:
-    container_name: classifier
+    container_name: collector
     build: ./collector
     environment:
       TZ: CET
       KAFKA_BROKER_URL: broker:9092
     volumes: 
       - ./logs:/logs:rw
+    networks:
+      - api
+      - storage
+    depends_on:
+    - influxdb
+
+  generator:
+    container_name: generator
+    build: ./generator
+    environment:
+      TZ: CET
+      LINES_PER_SECOND: 0.5
+      COLLECTOR_URL: collector
+    volumes: 
+      - ./logs:/logs:rw
+    networks:
+      - api
+    depends_on:
+      - collector
 
   classifier:
     container_name: classifier
@@ -28,6 +38,8 @@ services:
       KAFKA_BROKER_URL: broker:9092
     volumes: 
       - ./logs:/logs:rw
+    networks:
+      - storage
 
   influxdb:
     container_name: influxdb
@@ -36,26 +48,26 @@ services:
       TZ: CET
     ports:
       - 8086:8086
-
-  nginx:
-    restart: always
-    image: "nginx:latest"
-    ports:
-      - "80:80"
-      - "443":"443"
-    volumes:
-      - ./nginx:/etc/nginx/conf.d
     networks:
-      - web_network
-    depends_on: 
-      - appseed-app
+      - storage
+  
+  analytics:
+    container_name: analytics
+    build: ./analytics
+    environment:
+      TZ: CET
+    ports:
+      - 5005:5005
+      - 3000:3000
+      - 3001:3001
+    networks:
+      - storage
+    depends_on:
+      - collector
+      - classifier
 
 networks:
-  db_network:
+  storage:
     driver: bridge
-  web_network:
-    driver: bridge          
-networks:
-  default:
-    external:
-      name: kafka-network
+  api:
+    driver: bridge

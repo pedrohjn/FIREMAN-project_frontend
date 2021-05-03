@@ -25,7 +25,7 @@ logging_config = {
             },
         'file': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': '/logs/classifier.log',
+            'filename': '/logs/collector.log',
             'mode': 'a',
             'maxBytes': 100000,
             'backupCount': 5,

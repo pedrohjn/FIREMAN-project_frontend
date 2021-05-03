@@ -4,9 +4,10 @@ import os
 DATA_PATH = 'data/spam_test.csv'
 LINES_PER_SECOND = float(os.environ.get('LINES_PER_SECOND'))
 SLEEP_TIME = 1 / LINES_PER_SECOND
+COLLECTOR_URL = os.environ.get('COLLECTOR_URL')
 
 collector = {
-    'url': 'localhost:5005',
+    'url': 'http://'+COLLECTOR_URL+':5005/FIREMAN/SPAM',
     'username': 'SPAM',
     'password': 'password',
     }
