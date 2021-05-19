@@ -1,3 +1,4 @@
+#from bson import json_util
 import json
 import cfg
 import logging
@@ -27,7 +28,7 @@ if __name__ == '__main__':
     for message in consumer:
         # get the data + merge with expeted dict to set missing keys to 'nan'
         data = message.value
-        data.pop('timestamp', None)
+        #data.pop('timestamp', None)
         data = {**cfg.EXPECTED_MESSAGE, **data}
         
         feature_names = list(data.keys())
@@ -37,8 +38,14 @@ if __name__ == '__main__':
         label = classifier.predict(imputed_data)
         # transform list to single value - label[0] + 
         # need to transform to int https://stackoverflow.com/a/50916741/8147433
-        producer.send('spam_predictions', value=json.dumps({'label': int(label[0]), 
-                                                            'timestamp': datetime.now().strftime('%H:%m:%S')}))
+        data_to_post = {'label': int(label[0])}
+        logger.info(data_to_post)
+        producer.send('spam_predictions', value=data_to_post)
+        #                                                    'timestamp': datetime.now().strftime('%H:%m:%S')}))
+        #producer.send('spam_predictions', json.dumps({'label': int(label[0]), 
+        #                                              'timestamp': datetime.now().strftime('%H:%m:%S')},
+        #                                              default=json_util.default).encode('utf-8'))
+        
 
         # DEBUG
         #logger.info(result)

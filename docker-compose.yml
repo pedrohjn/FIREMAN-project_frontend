@@ -13,8 +13,6 @@ services:
     networks:
       - api
       - storage
-    depends_on:
-    - influxdb
 
   generator:
     container_name: generator
@@ -50,21 +48,34 @@ services:
       - 8086:8086
     networks:
       - storage
-  
-  analytics:
-    container_name: analytics
-    build: ./analytics
+
+  telegraf:
+    container_name: telegraf
+    build: ./telegraf
     environment:
       TZ: CET
-    ports:
-      - 5005:5005
-      - 3000:3000
-      - 3001:3001
+    volumes:
+      - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
     networks:
       - storage
     depends_on:
-      - collector
-      - classifier
+      - influxdb
+
+  # analytics:
+  #   container_name: analytics
+  #   build: ./analytics
+  #   environment:
+  #     TZ: CET
+  #   ports:
+  #     - 5005:5005
+  #     - 3000:3000
+  #     - 3001:3001
+  #   networks:
+  #     - storage
+  #   depends_on:
+  #     - collector
+  #     - classifier
+
 
 networks:
   storage:

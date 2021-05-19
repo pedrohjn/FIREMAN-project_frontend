@@ -6,6 +6,8 @@
 ipython/.ipynb_checkpoints
 .python-version
 .pylintrc
+analytics/
+img/prev/
 
 # Distribution / packaging
 *.log*

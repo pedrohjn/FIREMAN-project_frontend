@@ -6,7 +6,7 @@ from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash
 import json
 from jsonschema import validate
-from influxdb import InfluxDBClient
+#from influxdb import InfluxDBClient
 from kafka import KafkaProducer
 from datetime import datetime
 
@@ -24,8 +24,8 @@ auth = HTTPBasicAuth()
 #users = {cfg.api['username']: generate_password_hash(cfg.api['password'])}
 
 # producers for kafka stream and Influxdb
-client = InfluxDBClient(host='influxdb', port=8086, database='fireman')
-client.create_database('fireman')
+#client = InfluxDBClient(host='influxdb', port=8086, database='fireman')
+#client.create_database('fireman')
 producer = KafkaProducer(
     bootstrap_servers=cfg.KAFKA_BROKER_URL,
     # Encode all values as JSON
@@ -34,11 +34,11 @@ producer = KafkaProducer(
 
 def check_postdata(request):
     # check posted data
-    if request.is_json is True:
-        posted_data = request.get_json(force=True)
+    #if request.is_json is True:
+    posted_data = request.get_json(force=True)
         #posted_data = request.json
-    else:
-        posted_data =  json.loads(request.data.decode("utf-8"))
+    #else:
+    #    posted_data =  json.loads(request.data.decode("utf-8"))
     
     # for later usage
     #validate(instance=posted_data, schema=input_schema)    
@@ -82,16 +82,16 @@ class SPAM(Resource):
         try:
             #validate input, check session_id, check input request content-type (json/text)   
             posted_data = check_postdata(request)
-            posted_data['timestamp'] = datetime.now().strftime('%H:%m:%S')
-            logger.info(posted_data)
+            #posted_data['timestamp'] = datetime.now().strftime('%H:%m:%S')
+            #logger.info(posted_data)
             producer.send('spam_data', value=posted_data)
-            result = [
-                {"measurement": "data", 
-                "tags": {},
-                "fields": posted_data
-                }
-                ]
-            client.write_points(result)
+            #result = [
+            #    {"measurement": "data", 
+            #    "tags": {},
+            #    "fields": posted_data
+            #    }
+            #    ]
+            #client.write_points(result)
 
         except Exception as ValidationError:
             return jsonify({"state": "ERROR",

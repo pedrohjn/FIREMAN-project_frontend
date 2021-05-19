@@ -1,95 +1,174 @@
-[2021-05-03 03:21:37,295] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to broker:9092 [('172.21.0.3', 9092) IPv4]
-[2021-05-03 03:21:37,296] [kafka.conn] [INFO] Probing node bootstrap-0 broker version
-[2021-05-03 03:21:37,296] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
-[2021-05-03 03:21:37,398] [kafka.conn] [INFO] Broker version identified as 2.5.0
-[2021-05-03 03:21:37,399] [kafka.conn] [INFO] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
-[2021-05-03 03:21:37,400] [kafka.coordinator.consumer] [WARNING] group_id is None: disabling auto-commit.
-[2021-05-03 03:21:37,400] [kafka.consumer.subscription_state] [INFO] Updating subscribed topics to: ('spam_data',)
-[2021-05-03 03:21:37,402] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to broker:9092 [('172.21.0.3', 9092) IPv4]
-[2021-05-03 03:21:37,402] [kafka.conn] [INFO] Probing node bootstrap-0 broker version
-[2021-05-03 03:21:37,403] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
-[2021-05-03 03:21:37,504] [kafka.conn] [INFO] Broker version identified as 2.5.0
-[2021-05-03 03:21:37,505] [kafka.conn] [INFO] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
-[2021-05-03 03:21:37,508] [kafka.consumer.subscription_state] [INFO] Updated partition assignment: [TopicPartition(topic='spam_data', partition=0)]
-[2021-05-03 03:21:37,510] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to broker:9092 [('172.21.0.3', 9092) IPv4]
-[2021-05-03 03:21:37,510] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
-[2021-05-03 03:21:37,511] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
-[2021-05-03 03:21:38,246] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: connecting to broker:9092 [('172.21.0.3', 9092) IPv4]
-[2021-05-03 03:21:38,247] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.3', 9092)]>: Connection complete.
-[2021-05-03 03:21:38,248] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.21.0.3', 9092)]>: Closing connection. 
-[2021-05-03 03:42:02,912] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
-[2021-05-03 03:42:02,913] [kafka.conn] [INFO] Probing node bootstrap-0 broker version
-[2021-05-03 03:42:02,914] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
-[2021-05-03 03:42:03,018] [kafka.conn] [INFO] Broker version identified as 2.5.0
-[2021-05-03 03:42:03,018] [kafka.conn] [INFO] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
-[2021-05-03 03:42:03,019] [kafka.coordinator.consumer] [WARNING] group_id is None: disabling auto-commit.
-[2021-05-03 03:42:03,020] [kafka.consumer.subscription_state] [INFO] Updating subscribed topics to: ('spam_data',)
-[2021-05-03 03:42:03,021] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
-[2021-05-03 03:42:03,022] [kafka.conn] [INFO] Probing node bootstrap-0 broker version
-[2021-05-03 03:42:03,023] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
-[2021-05-03 03:42:03,125] [kafka.conn] [INFO] Broker version identified as 2.5.0
-[2021-05-03 03:42:03,126] [kafka.conn] [INFO] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
-[2021-05-03 03:42:03,130] [kafka.consumer.subscription_state] [INFO] Updated partition assignment: [TopicPartition(topic='spam_data', partition=0)]
-[2021-05-03 03:42:03,131] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
-[2021-05-03 03:42:03,132] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
-[2021-05-03 03:42:03,132] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.21.0.2', 9092)]>: Closing connection. 
-[2021-05-03 03:42:03,315] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
-[2021-05-03 03:42:03,316] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
-[2021-05-03 03:42:03,316] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.21.0.2', 9092)]>: Closing connection. 
-[2021-05-03 09:29:23,139] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
-[2021-05-03 09:29:23,140] [kafka.conn] [INFO] Probing node bootstrap-0 broker version
-[2021-05-03 09:29:23,141] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
-[2021-05-03 09:29:23,243] [kafka.conn] [INFO] Broker version identified as 2.5.0
-[2021-05-03 09:29:23,244] [kafka.conn] [INFO] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
-[2021-05-03 09:29:23,245] [kafka.coordinator.consumer] [WARNING] group_id is None: disabling auto-commit.
-[2021-05-03 09:29:23,246] [kafka.consumer.subscription_state] [INFO] Updating subscribed topics to: ('spam_data',)
-[2021-05-03 09:29:23,248] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
-[2021-05-03 09:29:23,249] [kafka.conn] [INFO] Probing node bootstrap-0 broker version
-[2021-05-03 09:29:23,250] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
-[2021-05-03 09:29:23,352] [kafka.conn] [INFO] Broker version identified as 2.5.0
-[2021-05-03 09:29:23,353] [kafka.conn] [INFO] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
-[2021-05-03 09:29:23,356] [kafka.consumer.subscription_state] [INFO] Updated partition assignment: [TopicPartition(topic='spam_data', partition=0)]
-[2021-05-03 09:29:23,357] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
-[2021-05-03 09:29:23,358] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
-[2021-05-03 09:29:23,358] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.21.0.2', 9092)]>: Closing connection. 
-[2021-05-03 09:29:23,931] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
-[2021-05-03 09:29:23,932] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
-[2021-05-03 09:29:23,933] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.21.0.2', 9092)]>: Closing connection. 
-[2021-05-03 09:59:41,011] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
-[2021-05-03 09:59:41,012] [kafka.conn] [INFO] Probing node bootstrap-0 broker version
-[2021-05-03 09:59:41,013] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
-[2021-05-03 09:59:41,118] [kafka.conn] [INFO] Broker version identified as 2.5.0
-[2021-05-03 09:59:41,119] [kafka.conn] [INFO] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
-[2021-05-03 09:59:41,120] [kafka.coordinator.consumer] [WARNING] group_id is None: disabling auto-commit.
-[2021-05-03 09:59:41,121] [kafka.consumer.subscription_state] [INFO] Updating subscribed topics to: ('spam_data',)
-[2021-05-03 09:59:41,123] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
-[2021-05-03 09:59:41,124] [kafka.conn] [INFO] Probing node bootstrap-0 broker version
-[2021-05-03 09:59:41,127] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
-[2021-05-03 09:59:41,230] [kafka.conn] [INFO] Broker version identified as 2.5.0
-[2021-05-03 09:59:41,231] [kafka.conn] [INFO] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
-[2021-05-03 09:59:41,234] [kafka.consumer.subscription_state] [INFO] Updated partition assignment: [TopicPartition(topic='spam_data', partition=0)]
-[2021-05-03 09:59:41,236] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
-[2021-05-03 09:59:41,236] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
-[2021-05-03 09:59:41,238] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.21.0.2', 9092)]>: Closing connection. 
-[2021-05-03 09:59:42,022] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
-[2021-05-03 09:59:42,022] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
-[2021-05-03 09:59:42,023] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.21.0.2', 9092)]>: Closing connection. 
-[2021-05-03 10:04:15,682] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
-[2021-05-03 10:04:15,682] [kafka.conn] [INFO] Probing node bootstrap-0 broker version
-[2021-05-03 10:04:15,683] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
-[2021-05-03 10:04:15,788] [kafka.conn] [INFO] Broker version identified as 2.5.0
-[2021-05-03 10:04:15,789] [kafka.conn] [INFO] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
-[2021-05-03 10:04:15,790] [kafka.coordinator.consumer] [WARNING] group_id is None: disabling auto-commit.
-[2021-05-03 10:04:15,791] [kafka.consumer.subscription_state] [INFO] Updating subscribed topics to: ('spam_data',)
-[2021-05-03 10:04:15,795] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
-[2021-05-03 10:04:15,797] [kafka.conn] [INFO] Probing node bootstrap-0 broker version
-[2021-05-03 10:04:15,798] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
-[2021-05-03 10:04:15,901] [kafka.conn] [INFO] Broker version identified as 2.5.0
-[2021-05-03 10:04:15,902] [kafka.conn] [INFO] Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
-[2021-05-03 10:04:15,906] [kafka.consumer.subscription_state] [INFO] Updated partition assignment: [TopicPartition(topic='spam_data', partition=0)]
-[2021-05-03 10:04:15,909] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
-[2021-05-03 10:04:15,910] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
-[2021-05-03 10:04:15,910] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.21.0.2', 9092)]>: Closing connection. 
-[2021-05-03 10:04:16,560] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: connecting to broker:9092 [('172.21.0.2', 9092) IPv4]
-[2021-05-03 10:04:16,561] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.21.0.2', 9092)]>: Connection complete.
-[2021-05-03 10:04:16,561] [kafka.conn] [INFO] <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.21.0.2', 9092)]>: Closing connection. 
+[2021-05-12 23:28:15,648] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:28:17,655] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:28:19,660] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:28:21,665] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:28:23,676] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:28:25,696] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:28:27,688] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:28:29,697] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:28:31,715] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:28:33,734] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:28:35,725] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:28:37,732] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:28:39,753] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:28:41,762] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:28:43,764] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:28:45,770] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:28:47,777] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:28:49,782] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:28:51,790] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:28:53,795] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:28:55,802] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:28:57,807] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:28:59,813] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:29:01,819] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:29:03,831] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:05,832] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:07,840] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:09,846] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:11,855] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:13,864] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:15,871] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:29:17,876] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:19,908] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:21,901] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:29:23,905] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:25,912] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:27,917] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:29:29,923] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:31,929] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:33,937] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:35,942] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:29:37,953] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:39,958] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:41,966] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:43,975] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:45,987] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:48,011] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:50,029] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:52,044] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:29:54,054] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:29:56,062] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:29:58,064] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:30:00,067] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:30:02,075] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:30:04,089] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:30:06,091] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:30:08,105] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:30:10,112] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:30:12,119] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:30:14,125] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:30:16,130] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:30:18,153] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:30:20,148] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:30:22,171] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:30:24,177] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:30:26,179] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:30:28,193] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:30:30,195] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:30:32,204] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:30:34,229] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:30:36,227] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:30:38,261] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:30:40,272] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:30:42,283] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:30:44,301] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:30:46,321] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:30:48,345] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:30:50,345] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:30:52,379] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:30:54,375] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:30:56,407] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:30:58,405] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:31:00,424] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:31:02,437] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:31:04,444] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:31:06,449] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:31:08,456] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:31:10,477] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:31:12,485] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:31:14,512] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:31:16,508] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:31:18,529] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:31:20,544] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:31:22,544] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:31:24,554] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:31:26,576] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:31:28,599] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:31:30,592] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:31:32,605] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:31:34,612] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:31:36,635] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:31:38,648] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:31:40,649] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:31:42,674] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:31:44,680] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:31:46,701] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:31:48,697] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:31:50,703] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:31:52,712] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:31:54,717] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:31:56,724] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:31:58,748] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:32:00,771] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:32:02,784] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:32:04,807] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:32:06,805] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:32:08,816] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:32:10,829] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:32:12,835] [__main__] [INFO] {'label': 0}
+[2021-05-12 23:32:14,840] [__main__] [INFO] {'label': 1}
+[2021-05-12 23:32:15,376] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connected> [IPv4 ('172.22.0.7', 9092)]>: Closing connection. KafkaConnectionError: Socket EVENT_READ without in-flight-requests
+[2021-05-12 23:32:15,378] [kafka.client] [WARNING] Node 1 connection failed -- refreshing metadata
+[2021-05-12 23:32:15,381] [kafka.conn] [ERROR] <BrokerConnection node_id=1 host=broker:9092 <connected> [IPv4 ('172.22.0.7', 9092)]>: socket disconnected
+[2021-05-12 23:32:15,382] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connected> [IPv4 ('172.22.0.7', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+[2021-05-12 23:32:15,382] [kafka.client] [WARNING] Node 1 connection failed -- refreshing metadata
+[2021-05-12 23:32:15,382] [kafka.consumer.fetcher] [ERROR] Fetch to node 1 failed: KafkaConnectionError: socket disconnected
+[2021-05-12 23:32:15,384] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: connecting to broker:9092 [('172.22.0.7', 9092) IPv4]
+[2021-05-12 23:32:15,384] [kafka.conn] [ERROR] Connect attempt to <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]> returned error 111. Disconnecting.
+[2021-05-12 23:32:15,385] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2021-05-12 23:32:15,386] [kafka.client] [WARNING] Node 1 connection failed -- refreshing metadata
+[2021-05-12 23:32:15,431] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: connecting to broker:9092 [('172.22.0.7', 9092) IPv4]
+[2021-05-12 23:32:15,432] [kafka.conn] [ERROR] Connect attempt to <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]> returned error 111. Disconnecting.
+[2021-05-12 23:32:15,432] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2021-05-12 23:32:15,433] [kafka.client] [WARNING] Node 1 connection failed -- refreshing metadata
+[2021-05-12 23:32:15,539] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: connecting to broker:9092 [('172.22.0.7', 9092) IPv4]
+[2021-05-12 23:32:15,541] [kafka.conn] [ERROR] Connect attempt to <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]> returned error 111. Disconnecting.
+[2021-05-12 23:32:15,541] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2021-05-12 23:32:15,543] [kafka.client] [WARNING] Node 1 connection failed -- refreshing metadata
+[2021-05-12 23:32:15,637] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: connecting to broker:9092 [('172.22.0.7', 9092) IPv4]
+[2021-05-12 23:32:15,638] [kafka.conn] [ERROR] Connect attempt to <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]> returned error 111. Disconnecting.
+[2021-05-12 23:32:15,638] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2021-05-12 23:32:15,639] [kafka.client] [WARNING] Node 1 connection failed -- refreshing metadata
+[2021-05-12 23:32:15,747] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: connecting to broker:9092 [('172.22.0.7', 9092) IPv4]
+[2021-05-12 23:32:15,749] [kafka.conn] [ERROR] Connect attempt to <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]> returned error 111. Disconnecting.
+[2021-05-12 23:32:15,750] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2021-05-12 23:32:15,752] [kafka.client] [WARNING] Node 1 connection failed -- refreshing metadata
+[2021-05-12 23:32:15,892] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: connecting to broker:9092 [('172.22.0.7', 9092) IPv4]
+[2021-05-12 23:32:15,893] [kafka.conn] [ERROR] Connect attempt to <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]> returned error 111. Disconnecting.
+[2021-05-12 23:32:15,893] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2021-05-12 23:32:15,894] [kafka.client] [WARNING] Node 1 connection failed -- refreshing metadata
+[2021-05-12 23:32:16,107] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: connecting to broker:9092 [('172.22.0.7', 9092) IPv4]
+[2021-05-12 23:32:16,107] [kafka.conn] [ERROR] Connect attempt to <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]> returned error 111. Disconnecting.
+[2021-05-12 23:32:16,108] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2021-05-12 23:32:16,108] [kafka.client] [WARNING] Node 1 connection failed -- refreshing metadata
+[2021-05-12 23:32:16,299] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: connecting to broker:9092 [('172.22.0.7', 9092) IPv4]
+[2021-05-12 23:32:16,300] [kafka.conn] [ERROR] Connect attempt to <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]> returned error 111. Disconnecting.
+[2021-05-12 23:32:16,301] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2021-05-12 23:32:16,302] [kafka.client] [WARNING] Node 1 connection failed -- refreshing metadata
+[2021-05-12 23:32:17,019] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: connecting to broker:9092 [('172.22.0.7', 9092) IPv4]
+[2021-05-12 23:32:17,020] [kafka.conn] [ERROR] Connect attempt to <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]> returned error 111. Disconnecting.
+[2021-05-12 23:32:17,020] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2021-05-12 23:32:17,021] [kafka.client] [WARNING] Node 1 connection failed -- refreshing metadata
+[2021-05-12 23:32:17,060] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: connecting to broker:9092 [('172.22.0.7', 9092) IPv4]
+[2021-05-12 23:32:17,061] [kafka.conn] [ERROR] Connect attempt to <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]> returned error 111. Disconnecting.
+[2021-05-12 23:32:17,062] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2021-05-12 23:32:17,063] [kafka.client] [WARNING] Node 1 connection failed -- refreshing metadata
+[2021-05-12 23:32:18,084] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: connecting to broker:9092 [('172.22.0.7', 9092) IPv4]
+[2021-05-12 23:32:18,085] [kafka.conn] [ERROR] Connect attempt to <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]> returned error 111. Disconnecting.
+[2021-05-12 23:32:18,085] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2021-05-12 23:32:18,085] [kafka.client] [WARNING] Node 1 connection failed -- refreshing metadata
+[2021-05-12 23:32:18,273] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: connecting to broker:9092 [('172.22.0.7', 9092) IPv4]
+[2021-05-12 23:32:18,274] [kafka.conn] [ERROR] Connect attempt to <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]> returned error 111. Disconnecting.
+[2021-05-12 23:32:18,274] [kafka.conn] [INFO] <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2021-05-12 23:32:18,275] [kafka.client] [WARNING] Node 1 connection failed -- refreshing metadata
