@@ -1,0 +1,15 @@
+# add this section to docker-compose.yml if yo want previous dashboard
+  analytics:
+    container_name: analytics
+    build: ./analytics
+    environment:
+      TZ: CET
+    ports:
+      - 5005:5005
+      - 3000:3000
+      - 3001:3001
+    networks:
+      - storage
+    depends_on:
+      - collector
+      - classifier
