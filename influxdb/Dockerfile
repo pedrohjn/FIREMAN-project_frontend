@@ -5,4 +5,4 @@ RUN apt-get update \
         && apt-get clean \
         && rm -rf /var/lib/apt-get/lists/* /tmp/* /var/tmp/*
 
-#COPY influxdb.conf /etc/influxdb/influxdb.conf
+COPY spam_uci_dataset.json /root/.influxdbv2/configs/

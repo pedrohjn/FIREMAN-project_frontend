@@ -1,4 +1,3 @@
-# add this section to docker-compose.yml if yo want previous dashboard
   analytics:
     container_name: analytics
     build: ./analytics

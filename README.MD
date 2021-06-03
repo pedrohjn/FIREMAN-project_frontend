@@ -45,10 +45,22 @@ docker-compose -f docker-compose.kafka.yml up -d
 ```bash
 docker-compose -f docker-compose.yml up -d
 ```
+### 2.1. Dashboard
+
+Telegraf and Influxdb are preconfigured with initial password, organization, bucket and security token for mutual communication. For InfluxDB configuration see docker-compose.yml. Telegraf is also preconfigured to consume Kafka topics, see telegraf/telegraf.conf. Influxdb documentation does not include step necessary to load dashboard as resource when the database is intially started. As workaround import the dashboard in GUI as shown on screenshots below. 
+* user/pass: admin/adminadmin
+* dashboard location: influxdb/spam_uci_dataset.json
+
+<img src="https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/dashboard_login.png" height="320"/>
+<img src="https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/import_dashboard_01.png" height="320"/>
+<img src="https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/import_dashboard_02.png" height="320"/>
+<img src="https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/imported_dashboard.png" height="320"/>
 
 ## 3. Monitoring
 ### 3.1. **NEW** solution using InfluxDB 2.x dashboard
 * easy to use, more flexible than prev solution (can include metrics monitoring docker containers from Telegraf)
+* GUI accessible with user/pass admin/adminadmin
+* telegraf communicates with infuxdb using token with predefined combination of [organization, bucket] and consumes topics [spam_data, spam_predictions], see /telegraf/telegraf.conf
 
 <img src="https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/fireman_dashboard_01.png" height="320"/>
 <img src="https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/img/fireman_dashboard_02.png" height="320"/>
