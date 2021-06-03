@@ -1,8 +1,11 @@
 FROM influxdb:2.0.6
 
-RUN apt-get update \
-	&& apt-get install -y --no-install-recommends tzdata \
-        && apt-get clean \
-        && rm -rf /var/lib/apt-get/lists/* /tmp/* /var/tmp/*
+ADD ./fireman_spam_uci_template.yml /tmp/
 
-COPY spam_uci_dataset.json /root/.influxdbv2/configs/
+COPY script.sh /
+RUN chmod +x /script.sh
+
+RUN apt-get update \
+	&& apt-get install -y --no-install-recommends tzdata\
+    && apt-get clean \
+    && rm -rf /var/lib/apt-get/lists/* /var/tmp/* 

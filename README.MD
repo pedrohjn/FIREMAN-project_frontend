@@ -47,7 +47,12 @@ docker-compose -f docker-compose.yml up -d
 ```
 ### 2.1. Dashboard
 
-Telegraf and Influxdb are preconfigured with initial password, organization, bucket and security token for mutual communication. For InfluxDB configuration see docker-compose.yml. Telegraf is also preconfigured to consume Kafka topics, see telegraf/telegraf.conf. Influxdb documentation does not include step necessary to load dashboard as resource when the database is intially started. As workaround import the dashboard in GUI as shown on screenshots below. 
+Telegraf and Influxdb are preconfigured with initial password, organization, bucket and security token for mutual communication. For InfluxDB configuration see docker-compose.yml. Telegraf is also preconfigured to consume Kafka topics, see telegraf/telegraf.conf. Influxdb documentation does not include step necessary to load dashboard as resource when the database is intially started.
+As workaround either (i) import the dashboard in GUI as shown on screenshots below, or (ii) issue a command to run script in the InfluxDB container that check if InfluxDB is running and import the previously export dasboard template.
+```bash
+docker exec influxdb './script.sh'
+```
+Current version of InfluxDB docker starts the influx service by ```influxd run``` command after all initial commands finished, as the dashboard imports neet the server to be already running this creates an issues with running scripts in the background at the startup.
 * user/pass: admin/adminadmin
 * dashboard location: influxdb/spam_uci_dataset.json
 
