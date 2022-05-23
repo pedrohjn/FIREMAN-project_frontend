@@ -105,7 +105,7 @@ docker exec -it [CONTAINER_TAG] /bin/bash
 
 ## 5. Note
 * [jupyter notebook](https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/examples/example_models_n_data_preparation.ipynb) describes how we create simple imputer , classifier and dataset
-  * notebook uses functions from [FIREMAN imputation repo](https://github.com/5uperpalo/FIREMAN-project_imputation)
+  * notebook uses functions from [FIREMAN imputation repo](https://github.com/5uperpalo/FIREMAN-project_imputation); this work refers to the activities of WP4 to be reported in D4.4.
 
 ## 6. Appendix
 * [TODO](https://github.com/5uperpalo/FIREMAN-project_frontend/blob/main/TODO.MD)
